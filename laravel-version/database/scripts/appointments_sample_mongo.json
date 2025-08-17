@@ -1,0 +1,102 @@
+[
+  {
+    "_id": { "$oid": "64e00a1a1a1a1a1a1a1a1a11" },
+    "patient_id": 1,
+    "doctor_id": 1,
+    "scheduled_at": "2025-08-18T09:00:00Z",
+    "status": "scheduled",
+    "notes": "First appointment",
+    "created_at": "2025-08-18T08:00:00Z",
+    "updated_at": "2025-08-18T08:00:00Z"
+  },
+  {
+    "_id": { "$oid": "64e00a1a1a1a1a1a1a1a1a12" },
+    "patient_id": 2,
+    "doctor_id": 2,
+    "scheduled_at": "2025-08-18T10:00:00Z",
+    "status": "scheduled",
+    "notes": "Second appointment",
+    "created_at": "2025-08-18T08:00:00Z",
+    "updated_at": "2025-08-18T08:00:00Z"
+  },
+  {
+    "_id": { "$oid": "64e00a1a1a1a1a1a1a1a1a13" },
+    "patient_id": 3,
+    "doctor_id": 3,
+    "scheduled_at": "2025-08-18T11:00:00Z",
+    "status": "completed",
+    "notes": "Third appointment",
+    "created_at": "2025-08-18T08:00:00Z",
+    "updated_at": "2025-08-18T08:00:00Z"
+  },
+  {
+    "_id": { "$oid": "64e00a1a1a1a1a1a1a1a1a14" },
+    "patient_id": 4,
+    "doctor_id": 4,
+    "scheduled_at": "2025-08-18T12:00:00Z",
+    "status": "cancelled",
+    "notes": "Fourth appointment",
+    "created_at": "2025-08-18T08:00:00Z",
+    "updated_at": "2025-08-18T08:00:00Z"
+  },
+  {
+    "_id": { "$oid": "64e00a1a1a1a1a1a1a1a1a15" },
+    "patient_id": 5,
+    "doctor_id": 5,
+    "scheduled_at": "2025-08-18T13:00:00Z",
+    "status": "scheduled",
+    "notes": "Fifth appointment",
+    "created_at": "2025-08-18T08:00:00Z",
+    "updated_at": "2025-08-18T08:00:00Z"
+  },
+  {
+    "_id": { "$oid": "64e00a1a1a1a1a1a1a1a1a16" },
+    "patient_id": 6,
+    "doctor_id": 1,
+    "scheduled_at": "2025-08-18T14:00:00Z",
+    "status": "scheduled",
+    "notes": "Sixth appointment",
+    "created_at": "2025-08-18T08:00:00Z",
+    "updated_at": "2025-08-18T08:00:00Z"
+  },
+  {
+    "_id": { "$oid": "64e00a1a1a1a1a1a1a1a1a17" },
+    "patient_id": 7,
+    "doctor_id": 2,
+    "scheduled_at": "2025-08-18T15:00:00Z",
+    "status": "completed",
+    "notes": "Seventh appointment",
+    "created_at": "2025-08-18T08:00:00Z",
+    "updated_at": "2025-08-18T08:00:00Z"
+  },
+  {
+    "_id": { "$oid": "64e00a1a1a1a1a1a1a1a1a18" },
+    "patient_id": 8,
+    "doctor_id": 3,
+    "scheduled_at": "2025-08-18T16:00:00Z",
+    "status": "scheduled",
+    "notes": "Eighth appointment",
+    "created_at": "2025-08-18T08:00:00Z",
+    "updated_at": "2025-08-18T08:00:00Z"
+  },
+  {
+    "_id": { "$oid": "64e00a1a1a1a1a1a1a1a1a19" },
+    "patient_id": 9,
+    "doctor_id": 4,
+    "scheduled_at": "2025-08-18T17:00:00Z",
+    "status": "cancelled",
+    "notes": "Ninth appointment",
+    "created_at": "2025-08-18T08:00:00Z",
+    "updated_at": "2025-08-18T08:00:00Z"
+  },
+  {
+    "_id": { "$oid": "64e00a1a1a1a1a1a1a1a1a1a" },
+    "patient_id": 10,
+    "doctor_id": 5,
+    "scheduled_at": "2025-08-18T18:00:00Z",
+    "status": "scheduled",
+    "notes": "Tenth appointment",
+    "created_at": "2025-08-18T08:00:00Z",
+    "updated_at": "2025-08-18T08:00:00Z"
+  }
+]
