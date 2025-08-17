@@ -1,0 +1,33 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
+namespace dotnet_admin_dashboard.Domain.Entities
+{
+    [Table("Rooms")]
+    public class Room
+    {
+        [Key]
+        [BsonId]
+        [BsonRepresentation(BsonType.String)]
+        public Guid Id { get; set; }
+        [Required]
+        [BsonElement("roomNumber")]
+        public string RoomNumber { get; set; }
+        [BsonElement("type")]
+        public string Type { get; set; }
+        [BsonElement("departmentId")]
+        public int DepartmentId { get; set; }
+        [BsonElement("isOccupied")]
+        public bool IsOccupied { get; set; }
+        [BsonElement("createdBy")]
+        public string CreatedBy { get; set; }
+        [BsonElement("createdDateTime")]
+        public DateTime CreatedDateTime { get; set; }
+        [BsonElement("lastModifiedBy")]
+        public string LastModifiedBy { get; set; }
+        [BsonElement("lastModifiedDateTime")]
+        public DateTime LastModifiedDateTime { get; set; }
+    }
+}
