@@ -1,0 +1,68 @@
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using dotnet_admin_dashboard.Domain.Entities;
+using dotnet_admin_dashboard.Application.DTOs;
+using dotnet_admin_dashboard.Application.Services.Interfaces;
+
+namespace dotnet_admin_dashboard.Api.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class NotificationController : ControllerBase
+    {
+        private readonly INotificationService _service;
+        public NotificationController(INotificationService service)
+        {
+            _service = service;
+        }
+        // DTO-based endpoints
+        [HttpGet("dto")]
+        public async Task<IActionResult> GetAllDto() => Ok(await _service.GetAllAsync());
+        [HttpGet("dto/{id}")]
+        public async Task<IActionResult> GetDto(int id) => Ok(await _service.GetByIdAsync(id));
+        [HttpPost("dto")]
+        public async Task<IActionResult> CreateDto([FromBody] NotificationDto dto)
+        {
+            await _service.AddAsync(dto);
+            return CreatedAtAction(nameof(GetDto), new { id = dto.Id }, dto);
+        }
+        [HttpPut("dto/{id}")]
+        public async Task<IActionResult> UpdateDto(int id, [FromBody] NotificationDto dto)
+        {
+            dto.Id = id;
+            await _service.UpdateAsync(dto);
+            return NoContent();
+        }
+        [HttpDelete("dto/{id}")]
+        public async Task<IActionResult> DeleteDto(int id)
+        {
+            await _service.DeleteAsync(id);
+            return NoContent();
+        }
+        // Model-based (MongoDB) endpoints
+        [HttpGet("mongo")]
+        public async Task<IActionResult> GetAllMongo() => Ok(await _service.GetAllMongoAsync());
+        [HttpGet("mongo/{id}")]
+        public async Task<IActionResult> GetByIdMongo(string id) => Ok(await _service.GetByIdMongoAsync(id));
+        [HttpPost("mongo")]
+        public async Task<IActionResult> AddMongo([FromBody] Notification entity)
+        {
+            await _service.AddMongoAsync(entity);
+            return CreatedAtAction(nameof(GetByIdMongo), new { id = entity.Id }, entity);
+        }
+        [HttpPut("mongo/{id}")]
+        public async Task<IActionResult> UpdateMongo(string id, [FromBody] Notification entity)
+        {
+            entity.Id = id;
+            await _service.UpdateMongoAsync(entity);
+            return NoContent();
+        }
+        [HttpDelete("mongo/{id}")]
+        public async Task<IActionResult> DeleteMongo(string id)
+        {
+            await _service.DeleteMongoAsync(id);
+            return NoContent();
+        }
+    }
+}
